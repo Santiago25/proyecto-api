@@ -4,3 +4,7 @@ from db.proyecto_db import  listar_proyectos
 """ añadir usuario   al proyecto post asignar_trabajador()"""
 """ lista de proyectos  get listar_proyectos """
 """ comentario"""
+""" Mabel db usuario """
+""" Johanna get """
+""" Santiago post """
+""" Alexis db proyecto """
