@@ -2,7 +2,7 @@ from typing import  Dict
 from pydantic import BaseModel
 
 class AsignacionProyecto(BaseModel):
-    idAsignacion: int
+    idAsignacion: int = 0
     nombre: str
     nombreP: str
 
