@@ -27,6 +27,9 @@ def get_proyecto(nombreP: str):
     else:
         return None
 
+def get_proyectos():
+    return database_proyeto.values(): 
+
 def update_proyecto(proyecto_in_db: ProyectoInDB):
     database_proyecto[proyecto_in_db.nombreP] = proyecto_in_db
     return proyecto_in_db
@@ -34,6 +37,7 @@ def update_proyecto(proyecto_in_db: ProyectoInDB):
    
 database_proyectos = []
 generator = {"id":0}
+
 def save_proyecto(proyecto_in_db: ProyectoInDB):
     generator["id"] = generator["id"] + 1
     proyecto_in_db.id_Proyecto = generator["id"]
