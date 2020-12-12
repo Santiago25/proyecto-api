@@ -10,13 +10,13 @@ class ProyectoInDB(BaseModel):
 database_proyecto = Dict[str, ProyectoInDB]
 
 database_proyecto = {
-    "Actualización sistema contable": ProyectoInDB(**{"nombreP:":"Actualización sistema contable",
+    "Actualización sistema contable": ProyectoInDB(**{"nombreP":"Actualización sistema contable",
                                                       "actividadP":"Actualizar software con nuevos requerimientos",
                                                       "lider":"Andrés Perez"}),
-    "Mercadotecnia": ProyectoInDB(**{"nombreP:":"Mercadotecnia",
+    "Mercadotecnia": ProyectoInDB(**{"nombreP":"Mercadotecnia",
                                      "actividadP":"Estudiar el mercado textil",
                                      "lider":"Juan Lopez"}),
-    "Marketing Digital": ProyectoInDB(**{"nombreP:":"Marketing Digital",
+    "Marketing Digital": ProyectoInDB(**{"nombreP":"Marketing Digital",
                                          "actividadP":"Reforzar publicidad en Facebook e Instagram",
                                          "lider":"Ana Fernandez"}),                       
 }
