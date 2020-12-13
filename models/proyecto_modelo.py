@@ -7,8 +7,7 @@ class ProyectoIn(BaseModel):
     lider:str
 
 class ProyectoOut(BaseModel):
-    id_Proyecto: int
-    usuarios: []
-    date: datetime
-    actividad: str
+    nombreP: str
+    actividadP: str
+    lider: str
     

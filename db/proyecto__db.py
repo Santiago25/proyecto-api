@@ -5,7 +5,7 @@ class ProyectoInDB(BaseModel):
     nombreP: str
     actividadP: str
     lider:str
-    id_Proyecto: int=0
+    
 
 database_proyecto = Dict[str, ProyectoInDB]
 
@@ -28,7 +28,7 @@ def get_proyecto(nombreP: str):
         return None
 
 def get_proyectos():
-    return database_proyeto.values(): 
+    return database_proyecto.values()
 
 def update_proyecto(proyecto_in_db: ProyectoInDB):
     database_proyecto[proyecto_in_db.nombreP] = proyecto_in_db
