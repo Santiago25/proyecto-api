@@ -1,10 +1,9 @@
-from db.proyecto__db import get_proyecto, get_proyectos
-from db.usuario_db import get_user 
-from db.asignacion_db import AsignacionProyecto
-from db.asignacion_db import save_asignacion
-from models.asignacion_modelo import AsignacionIn
-from models.asignacion_modelo import AsignacionOut
+from db.proyecto__db import get_proyecto, get_proyectos,ProyectoInDB, new_proyect
+from db.usuario_db import get_user , UserInDB, new_user
+from db.asignacion_db import AsignacionProyecto, save_asignacion
+from models.asignacion_modelo import AsignacionIn, AsignacionOut
 from models.proyecto_modelo import ProyectoOut, ProyectoIn
+from models.usuario_modelo import UsuarioIn, UsuarioOut
 
 import datetime
 from fastapi import FastAPI, HTTPException
@@ -50,5 +49,24 @@ async def proyects_list():
     return proyects_out
 
 """ @api.post (/usuario) """
+@api.post("/usuario")
+async def new_proyect_in(n_usuario: UsuarioIn):
+
+    usuario_in_db = UserInDB(**n_usuario.dict())
+    usuario_in_db = new_user(usuario_in_db)
+
+    usuario_out = UsuarioOut(**usuario_in_db.dict())
+    
+    return usuario_out
 
 """ @api.post (/proyecto) """
+@api.post("/proyecto")
+async def new_proyect_in(n_proyecto: ProyectoIn):
+
+    proyecto_in_db = ProyectoInDB(**n_proyecto.dict())
+    proyecto_in_db = new_proyect(proyecto_in_db)
+
+    proyecto_out = ProyectoOut(**proyecto_in_db.dict())
+    
+    return proyecto_out
+    

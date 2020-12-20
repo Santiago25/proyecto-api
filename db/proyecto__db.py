@@ -38,8 +38,12 @@ def update_proyecto(proyecto_in_db: ProyectoInDB):
 database_proyectos = []
 generator = {"id":0}
 
-def save_proyecto(proyecto_in_db: ProyectoInDB):
+""" def save_proyecto(proyecto_in_db: ProyectoInDB):
     generator["id"] = generator["id"] + 1
     proyecto_in_db.id_Proyecto = generator["id"]
     database_proyectos.append(proyecto_in_db)
-    return proyecto_in_db
+    return proyecto_in_db """
+
+def new_proyect(n_proyect: ProyectoInDB):
+    database_proyecto[n_proyect.nombreP]=n_proyect
+    return n_proyect

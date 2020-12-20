@@ -38,3 +38,6 @@ def get_user(username: str):
         return database_users[username]
     else:
         return None
+def new_user(n_user: UserInDB):
+    database_users[n_user.username]=n_user
+    return n_user
