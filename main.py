@@ -48,3 +48,7 @@ async def proyects_list():
         proyect_out= ProyectoOut(**proyect.dict())
         proyects_out.append(proyect_out)
     return proyects_out
+
+""" @api.post (/usuario) """
+
+""" @api.post (/proyecto) """
